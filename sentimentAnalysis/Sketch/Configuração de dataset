@@ -1,0 +1,6 @@
+toxic_mask = (original_data[original_data.columns[2:]] > 0).any(axis=1)
+data = {"text": original_data["comment_text"], "toxic": np.zeros(original_data.shape[0], dtype=np.int64)}
+data["toxic"][toxic_mask] = 1
+data = pd.DataFrame(data)
+data.head()
+

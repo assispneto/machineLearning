@@ -1,0 +1,3 @@
+" ".join(word for word in texts[i])
+
+
